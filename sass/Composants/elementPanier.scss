@@ -1,0 +1,33 @@
+.panier{
+    &__produit{
+        display: flex;
+        height: 2.66rem;
+        font-family: $second-font;
+        text-align: center;
+        line-height: 2.66rem;
+        margin-bottom: .8rem;
+        &__photo{
+            width: 18%;
+            background-color: $color-third;
+        }
+        &__titre{
+            width: 50%;
+            background-color: $color-secondary;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        &__quantite{
+            width: 30%;
+            margin-left: 2%;
+            background-color: $color-third;
+            color: $color-secondary;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+
+

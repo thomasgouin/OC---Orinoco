@@ -1,0 +1,49 @@
+.carte{
+    width: 20.33rem;
+    height: 21.86rem;
+    border: 2px solid $color-third;
+    border-radius: 2rem;
+    margin: 1.5rem .5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__image{
+        width:100%;
+        height: 59.75%;
+        border-radius: 2rem 2rem 0 0;
+    }
+    &__description{
+        background-color: $color-secondary;
+        height: 40.24%;
+        &__titre{
+            margin: 1.66rem 0 0 1.66rem;
+        }
+        &__option{
+            height: 50%;
+            font-size: 1.13rem;
+            margin: 0.8rem 0 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+    &__prix{
+        position: absolute;
+        width: 50.8%;
+        height: 3.06rem;
+        border-radius: 2.9rem;
+        background-color: $color-third;
+        top: 170px;
+        right:0px;
+        text-align: center;
+        color: $color-primary;
+        font-size: 1.66rem;
+        line-height: 3.06rem;
+    }
+}
+
+.carte li{
+    line-height: .2rem;
+    margin: 0;
+}

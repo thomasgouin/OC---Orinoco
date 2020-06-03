@@ -1,0 +1,46 @@
+
+main{
+    padding: 2.2rem 7%;
+    min-height: 80vh;
+}
+
+p, li{
+    font-family: $main-font;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+  
+
+h1 {
+    color: $color-writting;
+    font-family: $second-font;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+
+}
+
+h2{
+    font-family: $second-font;
+    font-size: 1.93rem;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+strong{
+    color: $color-third;
+    font-weight: 600;
+}
+
+#wraper{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}

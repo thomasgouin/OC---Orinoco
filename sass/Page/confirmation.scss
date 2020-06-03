@@ -1,0 +1,23 @@
+.confirmation{
+    background-color: $color-secondary;
+    border-radius: 2rem;
+    height: 50%;
+    padding: 2rem;
+    margin: 10% 0;
+    &__titre{
+        font-family: $second-font;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    &__paragraphe{
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        font-family: $main-font;
+    }
+}
+
+.confirmation span{
+    color: $color-third;
+    font-weight: 500;
+}

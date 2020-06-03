@@ -1,0 +1,15 @@
+@import "./base/variables.scss";
+@import "./base/base.scss";
+@import "./Composants/carte.scss";
+@import "./Composants/boutonSelecteurs.scss";
+@import "./Composants/elementPanier.scss";
+
+@import "./Layout/footer.scss";
+@import "./Layout/header.scss";
+@import "./Layout/mainPart.scss";
+
+@import "./Page/produit.scss";
+@import "./Page/panier.scss";
+@import "./Page/confirmation.scss";
+
+@import "./Utilitaires/mediaquerries.scss";

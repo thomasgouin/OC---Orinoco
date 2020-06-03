@@ -1,0 +1,109 @@
+@media screen AND (min-width: 480px) {
+    p, li{
+        font-size: 1.33rem;
+        margin: 3rem 0;
+    }
+    h1{
+        font-size: 2.0rem;
+    }
+    h2{
+        font-size: 1.5;
+    }
+
+    .page-produit__description{
+        padding: 0 2rem;
+    }
+    .selecteur{
+        width: 16rem;
+        min-height: 34px;
+    }
+
+    
+    .achat{
+        margin: 2rem 0;
+        font-size: 2.2rem;
+        &__prix{
+            font-size: 2.2rem;
+            margin: 0;
+            line-height: 3rem;
+        }
+        &__bouton{
+            margin-left: 3rem ;
+            width: 40%;
+        }
+    }
+    .bouton{
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    .produit-image{
+        border-radius: 1.1rem;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+    }
+    .formulaire{
+        &__titre{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        &__label{
+            font-size: 1rem;
+            padding-left: 5%;
+            margin-bottom: 4rem;
+        }
+        &__input{
+            height: 3rem;     
+            margin-top: .6rem;
+            margin-bottom: 1.2rem;
+        }
+        &__submit{
+            height: 3rem;
+            width: 50%;
+            font-size: 1.5rem;
+        }
+    }
+    .confirmation{
+        &__titre{
+            font-size: 2rem;
+        }
+        &__paragraphe{
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+        }
+    }
+
+}
+
+@media screen AND (min-width: 1021px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .page-produit{
+        display: flex;
+        margin: 4.2rem 0;
+        flex-direction: row;
+        justify-content: space-around;
+        &__description{
+            width: 43vw;
+            height: 28.6vw;
+            margin: 0;
+        }
+        &__image{
+            width: 43vw;
+            height: 28.6vw;
+            margin: 0;
+        }
+    }
+    .panier-wrapper{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .panier{
+        width: 45%;
+        margin-top: 4.66rem;
+    }
+
+}
