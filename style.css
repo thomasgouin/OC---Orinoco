@@ -136,12 +136,24 @@ table {
   width: 20.33rem;
   height: 21.86rem;
   border: 2px solid #986EFB;
-  border-radius: 2rem;
+  border-radius: 2.15rem;
   margin: 1.5rem 0.5rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+.carte:hover {
+  cursor: pointer;
+}
+.carte:hover > .carte__image {
+  opacity: 0.6;
+}
+.carte:hover > .carte__description-hover {
+  transform: translate(0, -130px);
+}
+.carte:hover > .carte__prix {
+  border: #F5EDF3 2px solid;
 }
 .carte__image {
   width: 100%;
@@ -157,11 +169,20 @@ table {
 }
 .carte__description__option {
   height: 50%;
-  font-size: 1.13rem;
+  font-size: 0.5rem;
   margin: 0.8rem 0 0 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.carte__description-hover {
+  height: 40.24%;
+  position: absolute;
+  background-color: #986EFB;
+  bottom: -132px;
+  padding: 3rem 1rem 0 1rem;
+  color: #ffffff;
+  transition: transform 330ms ease-in-out;
 }
 .carte__prix {
   position: absolute;
@@ -175,11 +196,13 @@ table {
   color: #FFFFFF;
   font-size: 1.66rem;
   line-height: 3.06rem;
+  z-index: 999;
 }
 
 .carte li {
   line-height: 0.2rem;
-  margin: 0;
+  margin: 0 0 0 1rem;
+  font-size: 1rem;
 }
 
 .selecteur {
@@ -342,6 +365,10 @@ strong {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+}
+
+#wrapper a {
+  border: solid blue 2px;
 }
 
 .page-produit {

@@ -2,12 +2,26 @@
     width: 20.33rem;
     height: 21.86rem;
     border: 2px solid $color-third;
-    border-radius: 2rem;
+    border-radius: 2.15rem;
     margin: 1.5rem .5rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     position: relative;
+    &:hover{
+        cursor: pointer;
+    }
+    &:hover > .carte__image{
+        opacity: .6;
+    }
+    &:hover > .carte__description-hover{
+        transform: translate(0,-130px);
+        
+        
+    }
+    &:hover > .carte__prix{
+        border: $color-secondary 2px solid;
+    }
     &__image{
         width:100%;
         height: 59.75%;
@@ -21,12 +35,21 @@
         }
         &__option{
             height: 50%;
-            font-size: 1.13rem;
+            font-size: 0.5rem;
             margin: 0.8rem 0 0 1.5rem;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-evenly;
         }
+    }
+    &__description-hover{
+        height: 40.24%;
+        position: absolute;
+        background-color: $color-third;
+        bottom: -132px;
+        padding: 3rem 1rem 0 1rem;
+        color: #ffffff;
+        transition: transform 330ms ease-in-out;
     }
     &__prix{
         position: absolute;
@@ -40,10 +63,12 @@
         color: $color-primary;
         font-size: 1.66rem;
         line-height: 3.06rem;
+        z-index: 999;
     }
 }
 
 .carte li{
     line-height: .2rem;
-    margin: 0;
+    margin: 0 0 0 1rem;
+    font-size: 1rem;
 }
