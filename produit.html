@@ -59,32 +59,26 @@
 
     </header>
     <main>
-        <H1>Nos appareils photo / <span">$appareilSelectionne</span></H1>
+        <H1>Nos appareils photo / <span id= "name"></span></H1>
         <div class="page-produit">
             <section class="page-produit__description">
-                <p>« Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. »
-                </p>
-                <div class="selecteur">
-                    <select id="lentille">
-                        <option>Choisissez une lentille</option>
-                        <option value="lentille1">lentille1</option>
-                        <option value="Lentille2">lentille2</option>
-                        <option value="lentille3">lentille3</option>
-                    </select> 
+                <p id="description"></p>
+                <div id= "selecteur" class="selecteur">
+                  
                 </div>
                 <div class="achat">
-                    <p class="achat__prix">0000,00€</p>
+                    <p id="price" class="achat__prix">0000,00€</p>
                     <a href="./panier.html" class="achat__bouton bouton">
                     Acheter
                     </a>
                 </div>
             </section>
-            <section class="page-produit__image">
-            </section>
+            <img id="image" class="page-produit__image"></img>
         </div>
     </main>
     <footer>
 
     </footer>
+    <script src="./js/produit.js"></script>
 </body>
 </html>

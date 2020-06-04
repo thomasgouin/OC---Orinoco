@@ -12,7 +12,6 @@ class Carte {
     affichageCarte(){
 
         const wrapper = document.getElementById('wrapper');
-    
         const carte = document.createElement('article');carte.classList.add('carte');carte.setAttribute("id", this._id);
         const carteImage = document.createElement('img');carteImage.classList.add('carte__image');carteImage.setAttribute("src", this.imageUrl);
         const cartePrix = document.createElement('div');cartePrix.classList.add('carte__prix');cartePrix.textContent = Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(this.price/100)
@@ -31,16 +30,21 @@ class Carte {
         carteDescription.appendChild(carteTitre);
         carteDescription.appendChild(carteLenses);
         carte.appendChild(carteDescriptionHover);
-    
+        
+
+        const urlElement = new URL(" http://127.0.0.1:5500/produit.html");
+            urlElement.searchParams.set("name", this.name);
+            urlElement.searchParams.set("id", this._id);
+            urlElement.searchParams.set("price", this.price);
+            urlElement.searchParams.set("description", this.description);
+            urlElement.searchParams.set("image", this.imageUrl);
+            urlElement.searchParams.set("lenses", this.lenses);
+
         carte.addEventListener('click', function(){
-            window.location.href = "produit.html";
-        })
-    };
+            window.location.href = urlElement;
+        });
+    };   
 }
-
-
-
-
 
 
 /*

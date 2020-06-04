@@ -359,16 +359,12 @@ strong {
   font-weight: 600;
 }
 
-#wraper {
+#wrapper {
   margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-}
-
-#wrapper a {
-  border: solid blue 2px;
 }
 
 .page-produit {
@@ -524,6 +520,10 @@ strong {
   .selecteur {
     width: 16rem;
     min-height: 34px;
+  }
+
+  #wrapper {
+    flex-direction: row;
   }
 
   .achat {
