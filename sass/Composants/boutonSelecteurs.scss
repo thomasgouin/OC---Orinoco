@@ -38,14 +38,3 @@
 .selecteur select:focus {
     outline: none;
 }
-
-.bouton{
-    background-color: $color-third;
-    border: 2px solid $color-third;
-    border-radius: 3rem;
-    height: 1.5rem;
-    color: #fff;
-    text-align: center;
-    line-height: 1.3rem;
-    font-family: roboto;
-}

@@ -21,32 +21,39 @@ produitQuantite.appendChild(produitQuantitePlus);
 
 
 
-
+console.log(egal.value);
 const qMoins = document.getElementById('moins');
 const qPlus = document.getElementById('plus');
 
-
-function nombreAppareil() {
-    if (egal.value >0 && egal.value<11){
+function modifierNombre() {
+    if (egal.value >=0 && egal.value<11){
         qMoins.addEventListener('click', () => {
             egal.value = parseInt(egal.value) -1;
         });
         qPlus.addEventListener('click', () =>{
             egal.value = parseInt(egal.value) +1;
         });
-    }else if(egal.value == 0){
+    } else if(equal.value ==0) {
         qMoins.addEventListener('click', () => {
-            egal.value = 0;
+            egal.value === 0;
         });
-    } else {
         qPlus.addEventListener('click', () =>{
-            egal.value = 10;
+            egal.value = parseInt(egal.value) +1;
         });
+    }else{
+        qMoins.addEventListener('click', () => {
+            egal.value = parseInt(egal.value) -1;
+        });
+        qPlus.addEventListener('click', () =>{
+            egal.value ===10;
+        });
+    }  
+}
+modifierNombre();
 
-    }
-}  
 
-nombreAppareil()
+
+
 
     
 

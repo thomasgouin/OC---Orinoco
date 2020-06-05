@@ -12,16 +12,22 @@
     &__total{
         font-family: $second-font;
         font-size: 2rem;
-        line-height: 2.2rem;
+        line-height: 2rem;
         color: $color-third;
         font-weight: 700;
-        margin: 0;
+        margin: auto 0;
     }
     &__pTotal{
         width: 50%;
         margin-left: 5%;
         height: 2.8rem;
         line-height: 2.8rem;
+        border: $color-third solid 3px; 
+        border-radius: 3rem;
+        color: $color-third;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
     }
 }
 .formulaire{

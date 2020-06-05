@@ -20,4 +20,10 @@ select.appendChild(option);
 divSelecteur.appendChild(select);
 
 
+const button = document.getElementById('button');
+button.onclick = function () {
+    localStorage.setItem(id, _id);
+}
+
+
 
