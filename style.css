@@ -288,6 +288,28 @@ table {
   justify-content: space-between;
 }
 
+.quantiteMoins, .quantitePlus {
+  background-color: white;
+  color: black;
+  width: 33%;
+  border: solid 2px #986EFB;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+}
+.quantiteMoins:hover, .quantitePlus:hover {
+  cursor: pointer;
+}
+
+.quantiteEgal {
+  width: 33%;
+  background-color: #986EFB;
+  border: none;
+  text-align: center;
+  color: white;
+  font-family: "Merienda";
+  font-size: 1.5rem;
+}
+
 footer {
   background-color: #F5EDF3;
   width: 100%;
@@ -408,14 +430,6 @@ strong {
 .panier-wrapper {
   display: flex;
   flex-direction: column;
-}
-
-.quantiteMoins, .quantitePlus {
-  background-color: white;
-  color: black;
-  width: 33%;
-  border: solid 2px #986EFB;
-  font-family: "Roboto";
 }
 
 .panier-prix {

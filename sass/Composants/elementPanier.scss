@@ -27,7 +27,27 @@
         }
     }
 }
+.quantiteMoins, .quantitePlus {
+    background-color: white;
+    color: black;
+    width: 33%;
+    border: solid 2px $color-third;
+    font-family: $main-font;
+    font-size: 1.5rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
 
+.quantiteEgal{
+    width:33%;
+    background-color: $color-third;
+    border : none;
+    text-align: center;
+    color: white;
+    font-family: $second-font;
+    font-size : 1.5rem;
+}
 
 
 
