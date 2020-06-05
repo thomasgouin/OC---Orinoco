@@ -13,6 +13,7 @@ const produitQuantiteEgal = document.createElement('input'); produitQuantiteEgal
 const produitQuantitePlus = document.createElement('button'); produitQuantitePlus.classList.add('quantitePlus');produitQuantitePlus.setAttribute('id', 'plus');produitQuantitePlus.textContent= "+";
 
 const prixAppareil = parseInt(appareilJSONSParse.price);
+
 const prixTotal = document.getElementById('prixTotal');prixTotal.innerText= Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(prixAppareil/100);
 
 panier.appendChild(produitTotal);
