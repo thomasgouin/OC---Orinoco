@@ -38,7 +38,8 @@ class Carte {
             urlElement.searchParams.set("price", this.price);
             urlElement.searchParams.set("description", this.description);
             urlElement.searchParams.set("image", this.imageUrl);
-            urlElement.searchParams.set("lenses", this.lenses);
+            urlElement.searchParams.set("lenses", this.lenses);   
+            
 
         carte.addEventListener('click', function(){
             window.location.href = urlElement;

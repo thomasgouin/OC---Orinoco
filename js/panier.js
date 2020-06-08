@@ -1,36 +1,41 @@
 let appareilJSONSParse = JSON.parse(localStorage.getItem("appareil"));
-console.log(appareilJSONSParse);
 
+affichageLignePanier()
 
-
-const prixAppareil = parseInt(appareilJSONSParse.price);
-const prixTotal = document.getElementById('prixTotal');prixTotal.innerText= Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(prixAppareil/100);
+const prixAppareil = appareilJSONSParse.price/100;
+const prixTotal = document.getElementById('prixTotal');
+prixTotal.innerText= Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(prixAppareil);
 
 const qMoins = document.getElementById('moins');
 const qPlus = document.getElementById('plus');
+const qEgal = document.getElementById('egal');
+const panier = document.getElementById('panier');
+const infoBulle = document.createElement('p');infoBulle.classList.add('servicePro'); infoBulle.innerText = "Pour passer une commande suppérieure à 10, contactez notre service pro !";
+ 
 
-function modifierNombre() {
-    if (egal.value >=0 && egal.value<11){
-        qMoins.addEventListener('click', () => {
-            egal.value = parseInt(egal.value) -1;
-        });
-        qPlus.addEventListener('click', () =>{
-            egal.value = parseInt(egal.value) +1;
-        });
-    } else if(equal.value ==0) {
-        qMoins.addEventListener('click', () => {
-            egal.value === 0;
-        });
-        qPlus.addEventListener('click', () =>{
-            egal.value = parseInt(egal.value) +1;
-        });
+enleve();
+ajoute();
+
+
+function enleve(){
+    if (qEgal.value >0){
+        qEgal.value = parseInt(qEgal.value -1);
+        qMoins.addEventListener('click', enleve);
+    }else if (qEgal.value ==0){
+        qEgal.value = 0;
     }else{
-        qMoins.addEventListener('click', () => {
-            egal.value = parseInt(egal.value) -1;
-        });
-        qPlus.addEventListener('click', () =>{
-            egal.value ===10;
-        });
-    } 
+        panier.removeChild(infoBulle);
+    }
+    prixTotal.innerText = Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(prixAppareil*(qEgal.value));
 }
-modifierNombre();
+
+function ajoute(){
+    if (qEgal.value <10){
+        qEgal.value = parseInt(qEgal.value) +1;
+        qPlus.addEventListener('click', ajoute); 
+    }else {
+        qEgal.value = 10;
+        panier.appendChild(infoBulle);
+    }
+    prixTotal.innerText = Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(prixAppareil*(qEgal.value));
+}

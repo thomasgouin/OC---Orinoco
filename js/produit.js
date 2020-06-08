@@ -28,6 +28,5 @@ const button = document.getElementById('button');
 button.onclick = function () {
     let appareilJSONString = JSON.stringify(appareil);
     localStorage.setItem("appareil", appareilJSONString);
-    console.log(localStorage);
 }
 
