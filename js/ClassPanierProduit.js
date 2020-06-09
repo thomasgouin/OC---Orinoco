@@ -1,3 +1,4 @@
+// Création de la ligne récapitulative dans le panier
 
 function affichageLignePanier() {
 

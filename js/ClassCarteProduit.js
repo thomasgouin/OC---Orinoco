@@ -1,3 +1,9 @@
+/* Création de la classe carte pour la page Index
+
+    affichageCarte() 
+    => a pour but de créer les différents élements, de les assigner dans le DOM
+    => a pour but de générer une URL à partir des éléments de la carte cliquée
+*/
 class Carte {
 
     constructor(lenses, _id, name, price, description, imageUrl){
@@ -11,6 +17,7 @@ class Carte {
 
     affichageCarte(){
 
+        // Construction de l'élément carte
         const wrapper = document.getElementById('wrapper');
         const carte = document.createElement('article');carte.classList.add('carte');carte.setAttribute("id", this._id);
         const carteImage = document.createElement('img');carteImage.classList.add('carte__image');carteImage.setAttribute("src", this.imageUrl);
@@ -24,14 +31,15 @@ class Carte {
             const carteLensesItems = document.createElement('li');carteLensesItems.textContent = lense; 
             carteLenses.appendChild(carteLensesItems); 
         });
-    
+        
+        // Assignation des éléments 
         wrapper.appendChild(carte);
         carte.appendChild(carteImage);carte.appendChild(cartePrix);carte.appendChild(carteDescription);
         carteDescription.appendChild(carteTitre);
         carteDescription.appendChild(carteLenses);
         carte.appendChild(carteDescriptionHover);
         
-
+        // Création de l'URL avec les différents paramètres
         const urlElement = new URL(" http://127.0.0.1:5500/produit.html");
             urlElement.searchParams.set("name", this.name);
             urlElement.searchParams.set("id", this._id);
@@ -40,7 +48,6 @@ class Carte {
             urlElement.searchParams.set("image", this.imageUrl);
             urlElement.searchParams.set("lenses", this.lenses);   
             
-
         carte.addEventListener('click', function(){
             window.location.href = urlElement;
         });

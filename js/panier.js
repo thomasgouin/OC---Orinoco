@@ -1,7 +1,18 @@
+/* Récupère les éléments de l'URL pour créer un objet 
+    Affiche la ligne récapitulative avec afficheLignePanier() définie dans ClassPanierProduit.js
+
+    Création de fonction qui vont permettre de modifier les quantités de commande et de le multiplier le résultat par le prix. 
+    Cette fonction prend pour maximum 10 et renvoie un message d'information si l'utilisateur va au delà de 10. 
+
+*/
+
+// Récupération de l'URL et trasformation en objet JSON
 let appareilJSONSParse = JSON.parse(localStorage.getItem("appareil"));
 
+//Affichage de la ligne correspondante
 affichageLignePanier()
 
+//Calcul du prix total
 const prixAppareil = appareilJSONSParse.price/100;
 const prixTotal = document.getElementById('prixTotal');
 prixTotal.innerText= Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(prixAppareil);
@@ -12,8 +23,10 @@ const qEgal = document.getElementById('egal');
 const panier = document.getElementById('panier');
 const infoBulle = document.createElement('p');infoBulle.classList.add('servicePro'); infoBulle.innerText = "Pour passer une commande suppérieure à 10, contactez notre service pro !";
  
-
+//Modification des quantités bouton "-"
 enleve();
+
+//Modification des quantités Bouton "+"
 ajoute();
 
 

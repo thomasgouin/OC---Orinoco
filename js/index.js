@@ -1,3 +1,7 @@
+/* Récupération des données depuis l'API 
+    La méthode affichageCarte() est définie dans ClassCarteProduit.js
+*/
+
 const fetchApi = async function () {
     const response = await fetch ('http://localhost:3000/api/cameras')
     const jsonData = await response.json();

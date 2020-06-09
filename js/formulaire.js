@@ -1,3 +1,10 @@
+/* Validation du formulaire de contact
+    => création d'une validation RegEx pour chaque champ de formulaire
+    => création d'une fonction globale permettant l'envoi du formulaire
+*/
+
+
+
 const formulaire = document.forms['formulaireDeContact'];
 const email = document.forms['formulaireDeContact']['email'];
 const nom = document.forms['formulaireDeContact']['nom'];
