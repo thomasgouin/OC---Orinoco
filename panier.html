@@ -71,24 +71,23 @@
                 </div>
             </section>
             <section class="contact">
-                <form  class="formulaire" action="POST">
+                <form  name = "formulaireDeContact" class="formulaire" action="POST">
                     <legend class="formulaire__titre">Validez votre commande</legend> 
 
-                    <label class="formulaire__label" for="nom" required>Nom et prénom</label><br/>
-                    <input class="formulaire__input" type="text" name="nom" id="nom"/><br/>
+                    <label class="formulaire__label" for="nom" >Nom et prénom*</label><br/>
+                    <input class="formulaire__input" type="text" onblur="verfiNom(this)" name="nom"/><br/>
                     
-                    <label class="formulaire__label" for="email" required >E-mail</label><br/>
-                    <input class="formulaire__input" type="email" name="email" id="email"/></br>
-                    <label class="formulaire__label" for="telephone" required>Téléphone</label><br/>
-                    <input class="formulaire__input" type="tel" name="telephone" id="telephone"/><br/>
-                    <label class="formulaire__label" for="adrese" required>Adresse de facturation</label><br/>
-                    <input class="formulaire__input" type="text" name="adresse" id="adresse"/><br/>
+                    <label class="formulaire__label" for="email">E-mail*</label><br/>
+                    <input class="formulaire__input" type="email" name="email" onblur= "verifEmail(this)"/></br>
+                    <label class="formulaire__label" for="telephone">Téléphone*</label><br/>
+                    <input class="formulaire__input" type="tel" name="telephone"onblur= "verifTel(this)"/><br/>
+                    <label class="formulaire__label" for="adrese">Adresse de facturation*</label><br/>
+                    <input class="formulaire__input" type="text" name="adresse"/><br/>
 
                     <a href="./confirmation.html">
                         <input class="formulaire__submit" type="submit" value="Payer"/>
                     </a>
                 </form>
-                <a href="./confirmation.html">lien vers confirmation</a>
             </section>
             
         </div>
@@ -98,6 +97,7 @@
     </footer>
     <script src= "./js/ClassPanierProduit.js"></script>
     <script src= "./js/panier.js"></script>
+    <script src="./js/formulaire.js"></script>
 
 </body>
 </html>
