@@ -11,10 +11,6 @@ const nom = document.forms['formulaireDeContact']['nom'];
 const adresse = document.forms['formulaireDeContact']['adresse'];
 const telephone = document.forms['formulaireDeContact']['telephone'];
 
-console.log(nom);
-console.log(adresse);
-console.log(telephone);
-console.log(email);
 
 function surlignError(champ, erreur) {
     if (erreur){

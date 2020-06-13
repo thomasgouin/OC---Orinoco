@@ -6,8 +6,8 @@ function affichageLignePanier() {
     const panier = document.getElementById('panier');
 
     const produitTotal = document.createElement('article'); produitTotal.classList.add('panier__produit'); 
-    const produitImage = document.createElement('img'); produitImage.classList.add('panier__produit__photo');produitImage.setAttribute('src', appareilJSONSParse.image);
-    const produitTitre = document.createElement('h2'); produitTitre.classList.add('panier__produit__titre');produitTitre.innerText = appareilJSONSParse.name;
+    const produitImage = document.createElement('img'); produitImage.classList.add('panier__produit__photo');produitImage.setAttribute('src', panierParse[0].image);
+    const produitTitre = document.createElement('h2'); produitTitre.classList.add('panier__produit__titre');produitTitre.innerText = panierParse[0].name;
     const produitQuantite = document.createElement('div'); produitQuantite.classList.add('panier__produit__quantite');
 
     const produitQuantiteMoins = document.createElement('button'); produitQuantiteMoins.classList.add('quantiteMoins');produitQuantiteMoins.setAttribute('id', 'moins');produitQuantiteMoins.textContent= "-";

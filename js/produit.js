@@ -31,9 +31,34 @@ const fetchApi = async function () {
     const button = document.getElementById('button');
    // const panierExistant = JSON.parse(localStorage.getItem(""));
 
-    button.onclick = function () {
-        localStorage.setItem(appareil.name, appareilJSONString);
-    } 
+    button.onclick = function (e) {
+        e.preventDefault();
+        
+        let ajoutAppareil = {
+            id: appareil._id,
+            image: appareil.imageUrl,
+            name: appareil.name,
+            description: appareil.description,
+            price: appareil.price,
+            qty: 1
+        }
+        
+        let panierParse = JSON.parse(localStorage.getItem('panier'));
+        console.log(panierParse);
+
+
+            //let articleExistant = panierParse.find(element => element.id === item.id);
+        if(panierParse!==null){
+            panierParse.push(ajoutAppareil);
+            let panierString = JSON.stringify(panierParse);
+            localStorage.setItem('panier', panierString); 
+        }else{
+            let panier = [];
+            panier.push(ajoutAppareil);
+            let panierString = JSON.stringify(panier);
+            localStorage.setItem('panier', panierString); 
+        }
+    };
 } 
 fetchApi();
 

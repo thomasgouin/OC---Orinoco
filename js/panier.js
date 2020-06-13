@@ -7,13 +7,16 @@
 */
 
 // Récupération de l'URL et trasformation en objet JSON
-let appareilJSONSParse = JSON.parse(localStorage.getItem("appareil"));
+let panierParse = JSON.parse(localStorage.getItem('panier'));
+console.log(panierParse);
+
+
 
 //Affichage de la ligne correspondante
 affichageLignePanier()
 
 //Calcul du prix total
-const prixAppareil = appareilJSONSParse.price/100;
+const prixAppareil = panierParse.price/100;
 const prixTotal = document.getElementById('prixTotal');
 prixTotal.innerText= Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(prixAppareil);
 
