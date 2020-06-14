@@ -11,7 +11,7 @@
             background-color: $color-third;
         }
         &__titre{
-            width: 50%;
+            width: 40%;
             background-color: $color-secondary;
             font-size: 1rem;
             font-weight: 700;
@@ -25,6 +25,17 @@
             display: flex;
             justify-content: space-between;
         }
+        &__corbeille{
+            height: 100%;
+            width: 10%;
+            background-color: $color-secondary;
+            padding-top: 4px;
+            &:hover{
+                opacity: .8;
+                cursor: pointer;
+                border: $color-third 2px dotted;
+            }
+        }
     }
 }
 .quantiteMoins, .quantitePlus {
@@ -36,6 +47,7 @@
     font-size: 1.5rem;
     &:hover{
         cursor: pointer;
+        background-color: $color-secondary;
     }
 }
 

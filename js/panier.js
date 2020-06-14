@@ -14,5 +14,18 @@ let panierParse = JSON.parse(localStorage.getItem('panier'));
 
     affichageLignePanier()
 
-    console.log(panierParse);
+    let aPayer = 0;
+    for (let i=0; i<panierParse.length; i++){
+        let prixAppareil = panierParse[i].price/100;
+        let prixTotalAppareil = prixAppareil*panierParse[i].qty;
+        aPayer += prixTotalAppareil
+        console.log(prixTotalAppareil);
+        
+    }console.log(aPayer);
+    
+    panierParse
+    prixTotal.innerText = Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(aPayer);
 
+
+   
+    

@@ -267,7 +267,7 @@ input:focus {
   background-color: #986EFB;
 }
 .panier__produit__titre {
-  width: 50%;
+  width: 40%;
   background-color: #F5EDF3;
   font-size: 1rem;
   font-weight: 700;
@@ -281,6 +281,17 @@ input:focus {
   display: flex;
   justify-content: space-between;
 }
+.panier__produit__corbeille {
+  height: 100%;
+  width: 10%;
+  background-color: #F5EDF3;
+  padding-top: 4px;
+}
+.panier__produit__corbeille:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  border: #986EFB 2px dotted;
+}
 
 .quantiteMoins, .quantitePlus {
   background-color: white;
@@ -292,6 +303,7 @@ input:focus {
 }
 .quantiteMoins:hover, .quantitePlus:hover {
   cursor: pointer;
+  background-color: #F5EDF3;
 }
 
 .quantiteEgal {
