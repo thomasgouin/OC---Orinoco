@@ -31,13 +31,12 @@ const fetchApi = async function () {
     const button = document.getElementById('button');
    // const panierExistant = JSON.parse(localStorage.getItem(""));
 
-    button.onclick = function (e) {
-        e.preventDefault();
+    button.onclick = function () {
         
         let ajoutAppareil = {
+            name: appareil.name,
             id: appareil._id,
             image: appareil.imageUrl,
-            name: appareil.name,
             description: appareil.description,
             price: appareil.price,
             qty: 1
@@ -46,17 +45,24 @@ const fetchApi = async function () {
         let panierParse = JSON.parse(localStorage.getItem('panier'));
         console.log(panierParse);
 
-
             //let articleExistant = panierParse.find(element => element.id === item.id);
         if(panierParse!==null){
-            panierParse.push(ajoutAppareil);
-            let panierString = JSON.stringify(panierParse);
-            localStorage.setItem('panier', panierString); 
+            ajoutPanier(ajoutAppareil); 
         }else{
             let panier = [];
             panier.push(ajoutAppareil);
             let panierString = JSON.stringify(panier);
             localStorage.setItem('panier', panierString); 
+        }
+        function ajoutPanier(item){
+            let articleExistant = panierParse.find(element => element.id === item.id);
+            if(articleExistant !== undefined){
+                articleExistant.qty++;
+            }else{
+                panierParse.push(ajoutAppareil);
+                let panierString = JSON.stringify(panierParse);
+                localStorage.setItem('panier', panierString); 
+            }
         }
     };
 } 
