@@ -71,25 +71,33 @@
                 </div>
             </section>
             <section class="contact">
-                <form  name = "formulaireDeContact" class="formulaire" action="POST">
+                <form novalidate name = "formulaireDeContact" class="formulaire" action="POST">
                     <legend class="formulaire__titre">Validez votre commande</legend> 
 
-                    <label class="formulaire__label" for="nom" >Nom et prénom*</label><br/>
-                    <input class="formulaire__input" type="text" onblur="verfiNom(this)" name="nom"/><br/>
+                    <label class="formulaire__label" for="nom">Nom*</label>
+                    <span class="erreur" id="erreurNom"></span><br/>
+                    <input class="formulaire__input" type="text"  name="nom"/><br/>
                     
-                    <label class="formulaire__label" for="email">E-mail*</label><br/>
-                    <input class="formulaire__input" type="email" name="email" onblur= "verifEmail(this)"/></br>
-                    <label class="formulaire__label" for="telephone">Téléphone*</label><br/>
-                    <input class="formulaire__input" type="tel" name="telephone"onblur= "verifTel(this)"/><br/>
-                    <label class="formulaire__label" for="adrese">Adresse de facturation*</label><br/>
-                    <input class="formulaire__input" type="text" name="adresse"/><br/>
+                    <label class="formulaire__label" for="prenom" >Prénom*</label>
+                    <span class="erreur" id="erreurPrenom"></span><br/>
+                    <input class="formulaire__input" type="text"  name="prenom"/><br/>
+                    
+                    <label class="formulaire__label" for="email">E-mail*</label>
+                    <span class="erreur" id= "erreurEmail"></span><br/>
+                    <input class="formulaire__input" type="email" name="email"/></br>
+                    
+                    <label class="formulaire__label" for="adrese">Adresse de facturation*</label>
+                    <span class="erreur" id="erreurAdresse"></span><br/>
+                    <input class="formulaire__input" type="text" name="adresse" /><br/>
+                    
+                    <label class="formulaire__label" for="ville">Ville (indiquer le code postal)*</label>
+                    <span class="erreur" id="erreurVille"></span><br/>
+                    <input class="formulaire__input" type="text" name="ville"/><br/>
+                    
 
-                    <a href="./confirmation.html">
-                        <input class="formulaire__submit" type="submit" value="Payer"/>
-                    </a>
+                    <input class="formulaire__submit" type="submit" value="Payer" name="validation"/>
                 </form>
             </section>
-            
         </div>
     </main>
     <footer>

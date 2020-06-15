@@ -38,6 +38,9 @@
         font-weight: 700;
         margin-bottom: 1.5rem;
     }
+    &__petit{
+        display: flex;
+    }
     &__label{
         font-size: .8rem;
         padding-left: 5%;
@@ -48,7 +51,7 @@
         border: none;
         border-radius: 2rem;
         height: 2rem;   
-        width: 100%;     
+        width: 90%;     
         margin-top: .3rem;
         margin-bottom: .8rem;
         padding-left: 3rem;
@@ -69,8 +72,9 @@
         font-weight: 500;
         margin-left: 50%;
         position: relative;
+        &:hover{
+            opacity: .6;
+            cursor: pointer;
+        }
     }
 }
-
-
-

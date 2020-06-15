@@ -26,12 +26,21 @@ function affichageLignePanier() {
         produitQuantite.appendChild(qPlus); 
 
         const prixTotal = document.getElementById('prixTotal');
+        const infoBulle = document.createElement('p');infoBulle.classList.add('servicePro'); infoBulle.innerText = "Pour passer une commande suppérieure à 10, contactez notre service pro !";
+
         //Modification des quantités bouton "-"
-        enleve();
+
+        qMoins.addEventListener('click', function (){
+            enleve();
+            document.location.reload();
+        });
+        
 
         //Modification des quantités Bouton "+"
-        ajoute();
-
+        qPlus.addEventListener('click', function (){
+            ajoute();
+            document.location.reload();
+        }); 
 
         produitCorbeille.addEventListener('click', function(){
             panierParse.splice(i,1);
@@ -42,7 +51,6 @@ function affichageLignePanier() {
         function enleve(){
             if (qEgal.value >0){
                 qEgal.value = parseInt(qEgal.value -1);
-                qMoins.addEventListener('click', enleve);
                 panierParse[i].qty = qEgal.value;
                 localStorage.setItem('panier', JSON.stringify(panierParse));
             }else if (qEgal.value ==0){
@@ -57,7 +65,6 @@ function affichageLignePanier() {
         function ajoute(){
             if (qEgal.value <10){
                 qEgal.value = parseInt(qEgal.value) +1;
-                qPlus.addEventListener('click', ajoute); 
                 panierParse[i].qty = qEgal.value;
                 localStorage.setItem('panier', JSON.stringify(panierParse));
 
@@ -68,9 +75,7 @@ function affichageLignePanier() {
                 panier.appendChild(infoBulle);
             }
         }
-    }
-    const infoBulle = document.createElement('p');infoBulle.classList.add('servicePro'); infoBulle.innerText = "Pour passer une commande suppérieure à 10, contactez notre service pro !";
-    const prixTotal = document.getElementById('prixTotal');
+    }    
 }
 
 

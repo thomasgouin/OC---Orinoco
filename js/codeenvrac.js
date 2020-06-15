@@ -28,3 +28,8 @@ const button = document.getElementById('button');
 
     let appareilJSONString = JSON.stringify(appareil);
         localStorage.setItem('appareil', appareilJSONString);
+
+        const prixTotal = document.getElementById('prixTotal');
+    prixTotal.innerText = Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(prixAppareil*(qEgal.value));
+
+

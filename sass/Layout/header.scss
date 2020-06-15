@@ -17,14 +17,14 @@ header{
     width: 33%;
 }
 
-nav{
-    width: 33%;
-    padding: 0 auto;
-}
-ul{
+nav ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     
+}
+
+nav ul li{
+    margin-left: 1.5rem;
 }
 
 

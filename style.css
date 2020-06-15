@@ -353,14 +353,13 @@ header {
   width: 33%;
 }
 
-nav {
-  width: 33%;
-  padding: 0 auto;
+nav ul {
+  display: flex;
+  justify-content: center;
 }
 
-ul {
-  display: flex;
-  justify-content: space-around;
+nav ul li {
+  margin-left: 1.5rem;
 }
 
 main {
@@ -507,6 +506,9 @@ strong {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
+.formulaire__petit {
+  display: flex;
+}
 .formulaire__label {
   font-size: 0.8rem;
   padding-left: 5%;
@@ -517,7 +519,7 @@ strong {
   border: none;
   border-radius: 2rem;
   height: 2rem;
-  width: 100%;
+  width: 90%;
   margin-top: 0.3rem;
   margin-bottom: 0.8rem;
   padding-left: 3rem;
@@ -538,6 +540,10 @@ strong {
   font-weight: 500;
   margin-left: 50%;
   position: relative;
+}
+.formulaire__submit:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .confirmation {
