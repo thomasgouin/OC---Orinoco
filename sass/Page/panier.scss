@@ -51,7 +51,7 @@
         border: none;
         border-radius: 2rem;
         height: 2rem;   
-        width: 90%;     
+        width: 87%;     
         margin-top: .3rem;
         margin-bottom: .8rem;
         padding-left: 3rem;
@@ -60,21 +60,30 @@
             border: 2px solid $color-third;
         }
     }
-    &__submit{
+    &__validation{
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__submit, &__reset{
         border-radius: 2rem;
         border: none;
         background-color: $color-third;
         color: white;
         height: 2rem;
-        width: 50%;
+        width: 40%;
         font-size: 1.5rem;
         font-family: $second-font;
         font-weight: 500;
-        margin-left: 50%;
         position: relative;
         &:hover{
             opacity: .6;
             cursor: pointer;
         }
+    }
+    &__error{
+        border-color: red;
+
     }
 }

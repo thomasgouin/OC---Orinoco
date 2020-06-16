@@ -32,20 +32,20 @@ function affichageLignePanier() {
 
         qMoins.addEventListener('click', function (){
             enleve();
-            document.location.reload();
+            //document.location.reload();
         });
         
 
         //Modification des quantités Bouton "+"
         qPlus.addEventListener('click', function (){
             ajoute();
-            document.location.reload();
+            //document.location.reload();
         }); 
 
         produitCorbeille.addEventListener('click', function(){
             panierParse.splice(i,1);
             localStorage.setItem('panier', JSON.stringify(panierParse))
-            document.location.reload();
+            //document.location.reload();
         }) 
         
         function enleve(){

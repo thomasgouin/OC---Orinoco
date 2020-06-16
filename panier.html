@@ -71,31 +71,34 @@
                 </div>
             </section>
             <section class="contact">
-                <form novalidate name = "formulaireDeContact" class="formulaire" action="POST">
+                <form name = "formulaireDeContact" class="formulaire" action="" method="POST">
                     <legend class="formulaire__titre">Validez votre commande</legend> 
-
-                    <label class="formulaire__label" for="nom">Nom*</label>
-                    <span class="erreur" id="erreurNom"></span><br/>
-                    <input class="formulaire__input" type="text"  name="nom"/><br/>
+                    <div class="formulaire__identification">
+                        <label class="formulaire__label" for="nom">Nom*</label>
+                        <span class="erreur" id="erreurNom"></span><br/>
+                        <input class="formulaire__input" type="text"  name="nom" id="nom" placeholder="Indiquez votre nom" required/><br/>
                     
-                    <label class="formulaire__label" for="prenom" >Prénom*</label>
-                    <span class="erreur" id="erreurPrenom"></span><br/>
-                    <input class="formulaire__input" type="text"  name="prenom"/><br/>
-                    
-                    <label class="formulaire__label" for="email">E-mail*</label>
-                    <span class="erreur" id= "erreurEmail"></span><br/>
-                    <input class="formulaire__input" type="email" name="email"/></br>
-                    
-                    <label class="formulaire__label" for="adrese">Adresse de facturation*</label>
-                    <span class="erreur" id="erreurAdresse"></span><br/>
-                    <input class="formulaire__input" type="text" name="adresse" /><br/>
-                    
-                    <label class="formulaire__label" for="ville">Ville (indiquer le code postal)*</label>
-                    <span class="erreur" id="erreurVille"></span><br/>
-                    <input class="formulaire__input" type="text" name="ville"/><br/>
-                    
-
-                    <input class="formulaire__submit" type="submit" value="Payer" name="validation"/>
+                        <label class="formulaire__label" for="prenom" >Prénom*</label>
+                        <span class="erreur" id="erreurPrenom"></span><br/>
+                        <input class="formulaire__input" type="text"  name="prenom" id="prenom" placeholder="Indiquez votre prénom" required/><br/>
+                    </div>
+                    <div class="formulaire__coordonnées">
+                        <label class="formulaire__label" for="email">E-mail*</label>
+                        <span class="erreur" id= "erreurEmail"></span><br/>
+                        <input class="formulaire__input" type="email" name="email" id="email" placeholder="Saissez votre e-mail" required/></br>
+                        
+                        <label class="formulaire__label" for="adrese">Adresse de facturation*</label>
+                        <span class="erreur" id="erreurAdresse"></span><br/>
+                        <input class="formulaire__input" type="text" name="adresse" id="adresse" placeholder="Indiquez votre adresse" required/><br/>
+                        
+                        <label class="formulaire__label" for="ville">Ville*</label>
+                        <span class="erreur" id="erreurVille"></span><br/>
+                        <input class="formulaire__input" type="text" name="ville" id="ville" placeholder="Indiquez votre code postal" required/><br/>
+                    </div>
+                    <div class="formulaire__validation">
+                        <button class="formulaire__reset" type="reset" name="reset">Effacer</button>
+                        <button class="formulaire__submit" type="submit" name="payer">Payer</button>
+                    </div>
                 </form>
             </section>
         </div>

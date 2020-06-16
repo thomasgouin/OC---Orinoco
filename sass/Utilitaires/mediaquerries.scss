@@ -59,9 +59,9 @@
             margin-top: .6rem;
             margin-bottom: 1.2rem;
         }
-        &__submit{
+        &__submit, &__reset{
             height: 3rem;
-            width: 50%;
+            width: 40%;
             font-size: 1.5rem;
         }
     }
@@ -103,9 +103,13 @@
         flex-direction: row;
         justify-content: space-around;
     }
-    .panier{
+    .panier, .contact{
         width: 45%;
-        margin-top: 4.66rem;
+        margin-top: 2rem;
     }
+    .formulaire{
+        margin-top: 0;
+    }
+    
 
 }

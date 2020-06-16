@@ -4,76 +4,42 @@
 */
 
 const formulaire = document.forms['formulaireDeContact'];
-const email = document.forms['formulaireDeContact']['email'];
 const nom = document.forms['formulaireDeContact']['nom'];
 const prenom = document.forms['formulaireDeContact']['prenom'];
+const email = document.forms['formulaireDeContact']['email'];
 const adresse = document.forms['formulaireDeContact']['adresse'];
 const ville = document.forms['formulaireDeContact']['ville'];
-const validation = document.forms['formulaireDeContact']['validation'];
+const validation = document.forms['formulaireDeContact']['payer'];
+const supprimer = document.forms['formulaireDeContact']['reset'];
 
 
+const inputs = document.querySelectorAll('input');
 
-validation.addEventListener("click", (e)=>{
 
-    //Vérifier que la commande n'est pas nulle
-
-    if (aPayer === 0){
-        alert('Commandez au moins un produit')
-        e.preventDefault();
-    }else{
-        let nomValide = /^[A-Za-zéèïîÉÈÏÎ][a-zéèïùçïî]+([-'\s][a-zA-ZéèïîÉÈÏÎ][a-zéèïùçïî]+)?$/;
-        if(nom.value ==""){
-            e.preventDefault();
-            document.getElementById('erreurNom').textContent='Quel est ton nom ?';
-            document.getElementById('erreurNom').style.color = "red";
-        }else if(nomValide.test(nom.value) == false){
-            e.preventDefault();
-            document.getElementById('erreurNom').textContent='Aïe, il semblerait que ton nom soit un peu compliqué...';
-            document.getElementById('erreurNom').style.color = "orange";
+const checkValidity = (input) =>{
+    
+    input.addEventListener('invalid',(e) =>{
+        e.preventDefault()
+        if(!e.target.validity.valid){
+            e.target.parentElement.classList.add('formulaire__error');
+            console.log(e.target.validity);
         }
-        let prenomValide = /^[A-Za-zéèïîÉÈÏÎ][a-zéèïùçïî]+([-'\s][a-zA-ZéèïîÉÈÏÎ][a-zéèïùçïî]+)?$/;
-        if(prenom.value ==""){
-            e.preventDefault();
-            document.getElementById('erreurPrenom').textContent='Quel est ton prénom ?';
-            document.getElementById('erreurPrenom').style.color = "red";
-        }else if(prenomValide.test(prenom.value) == false){
-            e.preventDefault();
-            document.getElementById('erreurPrenom').textContent='Aïe, il semblerait que ton prénom soit un peu compliqué...';
-            document.getElementById('erreurPrenom').style.color = "orange";
+    })
+    input.addEventListener('input',(e) =>{
+        e.preventDefault()
+        if(e.target.validity.valid){
+            e.target.parentElement.classList.remove('formulaire__error');
+            console.log(e.target.validity);
         }
-
-        let emailValide = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        if(email.value ==""){
-            e.preventDefault();
-            document.getElementById('erreurEmail').textContent='Indique nous ton e-mail';
-            document.getElementById('erreurEmail').style.color = "red";
-        }else if(emailValide.test(email.value) == false){
-            e.preventDefault();
-            document.getElementById('erreurEmail').textContent='Mhhh tu peux vérifier ton email s\'il te plait ?';
-            document.getElementById('erreurEmail').style.color = "orange";
-        };
+    })
+};
+let validationChamps = Array.from(inputs).forEach(checkValidity);
 
 
-        if(adresse.value ==""){
-            e.preventDefault();
-            document.getElementById('erreurAdresse').textContent='Quelle est ton adresse ?';
-            document.getElementById('erreurAdresse').style.color = "red";
-        }
 
-        let villeValide =  /\d{2}[ ]?\d{3}/
-        if(ville.value ==""){
-            e.preventDefault();
-            document.getElementById('erreurVille').textContent='Dans quelle ville habites-tu ?';
-            document.getElementById('erreurVille').style.color = "red";
-        }else if(villeValide.test(ville.value) == false){
-            e.preventDefault();
-            document.getElementById('erreurVille').textContent='Tu es sur(e) d\'avoir mis 5 chiffres ?;)';
-            document.getElementById('erreurVille').style.color = "orange";
-        };
-        
-        
-    }
-});
+
+    
+
 
 
 
