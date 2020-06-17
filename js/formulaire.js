@@ -11,29 +11,42 @@ const adresse = document.forms['formulaireDeContact']['adresse'];
 const ville = document.forms['formulaireDeContact']['ville'];
 const validation = document.forms['formulaireDeContact']['payer'];
 const supprimer = document.forms['formulaireDeContact']['reset'];
+let prixPanier = document.getElementById('prixTotal');
 
 
-const inputs = document.querySelectorAll('input');
 
-
-const checkValidity = (input) =>{
-    
-    input.addEventListener('invalid',(e) =>{
+const checkValidity = (input) => {
+    input.addEventListener('invalid', (e) => {
         e.preventDefault()
-        if(!e.target.validity.valid){
-            e.target.parentElement.classList.add('formulaire__error');
-            console.log(e.target.validity);
+        if (!e.target.validity.valid) {
+            e.target.classList.add('formulaire__error')
         }
     })
-    input.addEventListener('input',(e) =>{
-        e.preventDefault()
-        if(e.target.validity.valid){
-            e.target.parentElement.classList.remove('formulaire__error');
-            console.log(e.target.validity);
+    input.addEventListener('input', (e) => {
+        if (e.target.validity.valid) {
+            e.target.classList.remove('formulaire__error')
         }
     })
-};
-let validationChamps = Array.from(inputs).forEach(checkValidity);
+}
+sendData();
+
+function sendData(){
+    validation.addEventListener('click', (e)=>{
+        if(parseInt(prixPanier.innerText) ==0){
+            alert('Veuillez sélectionner au moins un produit');
+        }else{
+            Array.from(formulaire).forEach(checkValidity);
+        }
+    })
+}
+
+formulaire.addEventListener('submit', (e)=> {
+   e.preventDefault();
+   
+   console.log(panierParse);
+})
+
+
 
 
 

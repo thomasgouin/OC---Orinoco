@@ -550,8 +550,11 @@ strong {
   opacity: 0.6;
   cursor: pointer;
 }
+.formulaire__erreur {
+  color: #CC7838;
+}
 .formulaire__error {
-  border-color: red;
+  border: red 2px solid;
 }
 
 .confirmation {

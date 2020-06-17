@@ -82,8 +82,10 @@
             cursor: pointer;
         }
     }
+    &__erreur{
+        color: #CC7838;
+    }
     &__error{
-        border-color: red;
-
+        border: red 2px solid;
     }
 }

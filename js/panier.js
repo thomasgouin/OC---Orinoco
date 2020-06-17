@@ -6,25 +6,30 @@
 
 */
 
-// Récupération de l'URL et trasformation en objet JSON
-let panierParse = JSON.parse(localStorage.getItem('panier'));
 
 
 //Affichage de la ligne correspondante
+let panierParse = JSON.parse(localStorage.getItem('panier'));
+affichageLignePanier();
+updatePrixTotal();
 
-    affichageLignePanier()
+function updatePrixTotal(){
+// Récupération de l'URL et trasformation en objet JSON
+let panierParse = JSON.parse(localStorage.getItem('panier'));
+let aPayer = 0;
+for (let i=0; i<panierParse.length; i++){
+    let prixAppareil = panierParse[i].price/100;
+    let prixTotalAppareil = prixAppareil*panierParse[i].qty;
+    aPayer += prixTotalAppareil
+}
+//panierParse
+prixTotal.innerText = Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(aPayer);
+}
 
-    let aPayer = 0;
-    for (let i=0; i<panierParse.length; i++){
-        let prixAppareil = panierParse[i].price/100;
-        let prixTotalAppareil = prixAppareil*panierParse[i].qty;
-        aPayer += prixTotalAppareil
-        console.log(prixTotalAppareil);
-        
-    }console.log(aPayer);
-    
-    panierParse
-    prixTotal.innerText = Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(aPayer);
+document.addEventListener("updatePanier", () => {
+    updatePrixTotal();
+});
+
 
 
    
