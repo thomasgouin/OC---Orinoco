@@ -43,9 +43,7 @@ const fetchApi = async function () {
         }
         
         let panierParse = JSON.parse(localStorage.getItem('panier'));
-        console.log(panierParse);
 
-            //let articleExistant = panierParse.find(element => element.id === item.id);
         if(panierParse!==null){
             ajoutPanier(ajoutAppareil); 
         }else{

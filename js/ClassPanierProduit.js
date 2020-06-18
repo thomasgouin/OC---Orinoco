@@ -38,14 +38,16 @@ function affichageLignePanier() {
         
         qPlus.addEventListener('click', function (){
             ajoute();
-            let updateEvt = new Event('updatePanier', {bubbles: false})
-            document.dispatchEvent(updateEvt);
+            let updatePrice = new Event('updatePanier', {bubbles: false})
+            document.dispatchEvent(updatePrice);
         }); 
         // suppression des éléments (bouton corbeille)
         produitCorbeille.addEventListener('click', function(){
             panierParse.splice(i,1);
             localStorage.setItem('panier', JSON.stringify(panierParse));
             panier.removeChild(produitTotal);
+            let updatePrice = new Event('updatePanier', {bubbles: false})
+            document.dispatchEvent(updatePrice);
         });
         
         function enleve(){

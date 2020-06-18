@@ -71,29 +71,30 @@
                 </div>
             </section>
             <section class="contact">
-                <form name = "formulaireDeContact" class="formulaire" action="" method="POST">
+                <form id = "formulaireDeContact" name = "formulaireDeContact" class="formulaire" action="" method="POST">
                     <legend class="formulaire__titre">Validez votre commande</legend> 
                     <div class="formulaire__identification">
                         <label class="formulaire__label" for="nom">Nom*</label>
                         <span class="formulaire__erreur" id="erreurNom"></span>
-                        <input class="formulaire__input" type="text"  name="nom" id="nom" placeholder="Indiquez votre nom" pattern= "^[A-Za-zïéèùÉÈÏ]{2,15}[\S\- ]?[A-Za-zïéèùÉÈÏ]{0,15}"required/><br/>
+                        <input class="formulaire__input" type="text"  name="firstName" id="nom" placeholder="Indiquez votre nom" pattern= "^[A-Za-zïéèùÉÈÏ]{2,15}[\S\- ]?[A-Za-zïéèùÉÈÏ]{0,15}"required/><br/>
                     
                         <label class="formulaire__label" for="prenom" >Prénom*</label>
                         <span class="formulaire__erreur" id="erreurPrenom"></span>
-                        <input class="formulaire__input" type="text"  name="prenom" id="prenom" placeholder="Indiquez votre prénom" pattern= "^[A-Za-zïéèùÉÈÏ]{2,15}[\S\- ]?[A-Za-zïéèùÉÈÏ]{0,15}" required/><br/>
+                        <input class="formulaire__input" type="text"  name="lastName" id="prenom" placeholder="Indiquez votre prénom" pattern= "^[A-Za-zïéèùÉÈÏ]{2,15}[\S\- ]?[A-Za-zïéèùÉÈÏ]{0,15}" required/><br/>
                     </div>
                     <div class="formulaire__coordonnées">
-                        <label class="formulaire__label" for="email">E-mail*</label>
-                        <span class="formulaire__erreur" id= "erreurEmail"></span>
-                        <input class="formulaire__input" type="email" name="email" id="email" placeholder="Saissez votre e-mail" required/></br>
                         
                         <label class="formulaire__label" for="adrese">Adresse de facturation*</label>
                         <span class="formulaire__erreur" id="erreurAdresse"></span>
-                        <input class="formulaire__input" type="text" name="adresse" id="adresse" placeholder="Indiquez votre adresse" required/><br/>
+                        <input class="formulaire__input" type="text" name="address" id="adresse" placeholder="Indiquez votre adresse" required/><br/>
                         
                         <label class="formulaire__label" for="ville">Ville*</label>
                         <span class="formulaire__erreur" id="erreurVille"></span>
-                        <input class="formulaire__input" type="text" name="ville" id="ville" placeholder="Indiquez votre code postal" pattern= "^[A-Za-zïéèùÉÈÏ]{2,15}[\S\- ]?[A-Za-zïéèùÉÈÏ\S\- ]{0,15}"required/><br/>
+                        <input class="formulaire__input" type="text" name="city" id="ville" placeholder="Indiquez votre code postal" pattern= "^[A-Za-zïéèùÉÈÏ]{2,15}[\S\- ]?[A-Za-zïéèùÉÈÏ\S\- ]{0,15}"required/><br/>
+                        
+                        <label class="formulaire__label" for="email">E-mail*</label>
+                        <span class="formulaire__erreur" id= "erreurEmail"></span>
+                        <input class="formulaire__input" type="email" name="email" id="email" placeholder="Saissez votre e-mail" required/></br>
                     </div>
                     <div class="formulaire__validation">
                         <button class="formulaire__reset" type="reset" name="reset">Effacer</button>
