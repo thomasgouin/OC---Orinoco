@@ -40,7 +40,7 @@ class Carte {
         carte.appendChild(carteDescriptionHover);
         
         // Création de l'URL avec les différents paramètres
-        const urlElement = new URL("https://thomasgouin.github.io/projet5-oc-Orinoco/produit.html");
+        const urlElement = new URL(" http://127.0.0.1:5500/produit.html");
             urlElement.searchParams.set("id", this._id);
             
             
