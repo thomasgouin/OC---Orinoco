@@ -35,7 +35,7 @@ formulaire.addEventListener('submit', async (e)=>{
         products
     } 
     const response = await postData('POST','http://localhost:3000/api/cameras/order', donneesServeur);
-    window.location = `confirmation.html?id=${response.orderId}&firstName=${prenom.value}&lastName=${nom.value}&totalPrice=${prixPanier.innerText}`
+    window.location = `https://thomasgouin.github.io/projet5-oc-Orinoco/confirmation.html?id=${response.orderId}&firstName=${prenom.value}&lastName=${nom.value}&totalPrice=${prixPanier.innerText}`
     console.log(response);
 });       
 
