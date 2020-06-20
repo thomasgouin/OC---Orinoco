@@ -39,16 +39,16 @@ class Carte {
         carteDescription.appendChild(carteLenses);
         carte.appendChild(carteDescriptionHover);
         
-        // Création de l'URL avec les différents paramètres
+        // Création automatique de l'URL de destination qui prend en compte l'Id de chaque produit.
         const urlElement = new URL(" http://127.0.0.1:5500/produit.html");
             urlElement.searchParams.set("id", this._id);
             
-            
+        // Au clic sur chaque carte, nous renvoyons vers l'URL correspondante au produit
         carte.addEventListener('click', function(){
             window.location.href = urlElement;
         });
     }
-    
+    //Permet d'afficher le prix en euros et format français
     displayPrice(lang, money){
         return Intl.NumberFormat(lang, { style: 'currency', currency: money }).format(this.price/100)
     }
