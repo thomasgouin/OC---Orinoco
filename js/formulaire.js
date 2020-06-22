@@ -48,7 +48,17 @@ if(parseInt(prixTotal.innerText) !== 0){
     });
 }else{
     formulaire.addEventListener('submit', (e)=>{
-        alert('Veuillez ajouter au moins un produit dans votre panier');
+        swal.fire({
+            title: "Pas de bras, pas de chocolat",
+            icon: 'info',
+            text: "Veillez sélectionner au moins un article",
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+              },
+              hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+              },
+        });
         e.preventDefault();
     });    
 }       
