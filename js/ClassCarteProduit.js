@@ -40,7 +40,7 @@ class Carte {
         carte.appendChild(carteDescriptionHover);
         
         // Création automatique de l'URL de destination qui prend en compte l'Id de chaque produit.
-        const urlElement = new URL(" http://127.0.0.1:5500/produit.html");
+        const urlElement = new URL("https://thomasgouin.github.io/projet5-oc-Orinoco/index.html");
             urlElement.searchParams.set("id", this._id);
             
         // Au clic sur chaque carte, nous renvoyons vers l'URL correspondante au produit
