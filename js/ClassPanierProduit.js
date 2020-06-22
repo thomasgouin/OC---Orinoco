@@ -66,7 +66,7 @@ function affichageLignePanier() {
                 localStorage.setItem('panier', JSON.stringify(panierParse));
                 document.location.reload();
             //Si la quantité est égale à 10, on supprime la bulle info sur la quantité max
-            }else if(qEgal.value ==10){
+            }else if(qEgal.value >=10){
                 panier.removeChild(infoBulle);
             }
         }//Gestion de l'incrémentation des quantités pour chaque produit
