@@ -90,7 +90,7 @@
                         
                         <label class="formulaire__label" for="ville">Ville*</label>
                         <span class="formulaire__erreur" id="erreurVille"></span>
-                        <input class="formulaire__input" type="text" name="city" id="ville" placeholder="Indiquez votre code postal" pattern= "^[A-Za-zïéèùÉÈÏ]{2,15}[\S\- ]?[A-Za-zïéèùÉÈÏ\S\- ]{0,15}"required/><br/>
+                        <input class="formulaire__input" type="text" name="city" id="ville" placeholder="Indiquez votre code postal" pattern= "[0-9]{5}\s?"required/><br/>
                         
                         <label class="formulaire__label" for="email">E-mail*</label>
                         <span class="formulaire__erreur" id= "erreurEmail"></span>
@@ -109,6 +109,7 @@
     </footer>
     <script src= "./js/ClassPanierProduit.js"></script>
     <script src= "./js/panier.js"></script>
+    <script src="./js/validationFormulaire.js"></script>
     <script src="./js/formulaire.js"></script>
 
 </body>

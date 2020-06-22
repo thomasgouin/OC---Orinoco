@@ -21,9 +21,9 @@ const postData = async(method, url, data) => {
     return await response.json();
 }
 if(parseInt(prixTotal.innerText) !== 0){
-    
+
     formulaire.addEventListener('submit', async (e)=>{
-    
+        
         e.preventDefault();
         let contact = {
             firstName: nom.value,

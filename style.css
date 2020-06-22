@@ -575,7 +575,7 @@ strong {
   color: #CC7838;
 }
 .formulaire__error {
-  border: red 2px solid;
+  border: #CC7838 2px solid;
 }
 
 .confirmation {
