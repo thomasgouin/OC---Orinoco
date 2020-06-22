@@ -352,14 +352,35 @@ header {
 #logo {
   width: 33%;
 }
+#logo:hover {
+  opacity: 0.5;
+}
 
 nav ul {
   display: flex;
   justify-content: center;
 }
 
-nav ul li {
+nav ul li a {
   margin-left: 1.5rem;
+  display: inline-block;
+}
+nav ul li a:hover {
+  opacity: 0.5;
+}
+
+nav ul li a.active {
+  position: relative;
+}
+nav ul li a.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  right: 0;
+  height: 0.3rem;
+  background: #986EFB;
 }
 
 main {
