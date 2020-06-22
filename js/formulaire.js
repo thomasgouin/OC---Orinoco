@@ -9,35 +9,8 @@ const prenom = document.forms['formulaireDeContact']['firstName'];
 const email = document.forms['formulaireDeContact']['email'];
 const adresse = document.forms['formulaireDeContact']['address'];
 const ville = document.forms['formulaireDeContact']['city'];
-const validation = document.forms['formulaireDeContact']['payer'];
-const supprimer = document.forms['formulaireDeContact']['reset'];
 let prixPanier = document.getElementById('prixTotal');
 
-
-
-formulaire.addEventListener('submit', async (e)=>{
-    e.preventDefault();
-    let contact = {
-        firstName: nom.value,
-        lastName: prenom.value,
-        address: adresse.value,
-        city: ville.value,
-        email: email.value,
-    }
-    let products = [];
-    JSON.parse(localStorage.getItem('panier'))
-        for(let i = 0; i<panierParse.length; i++){
-        products.push(panierParse[i].id);
-    }
-
-    let donneesServeur = {
-        contact,
-        products
-    } 
-    const response = await postData('POST','http://localhost:3000/api/cameras/order', donneesServeur);
-    window.location = `https://thomasgouin.github.io/projet5-oc-Orinoco/confirmation.html?id=${response.orderId}&firstName=${prenom.value}&lastName=${nom.value}&totalPrice=${prixPanier.innerText}`
-    console.log(response);
-});       
 
 const postData = async(method, url, data) => {
     const response = await fetch(url,{
@@ -48,6 +21,38 @@ const postData = async(method, url, data) => {
     })
     return await response.json();
 }
+if(parseInt(prixTotal.innerText) !== 0){
+
+    formulaire.addEventListener('submit', async (e)=>{
+        
+        e.preventDefault();
+        let contact = {
+            firstName: nom.value,
+            lastName: prenom.value,
+            address: adresse.value,
+            city: ville.value,
+            email: email.value,
+        }
+        let products = [];
+        JSON.parse(localStorage.getItem('panier'))
+            for(let i = 0; i<panierParse.length; i++){
+            products.push(panierParse[i].id);
+        }
+    
+        let donneesServeur = {
+            contact,
+            products
+        } 
+        const response = await postData('POST','http://localhost:3000/api/cameras/order', donneesServeur);
+        window.location = `confirmation.html?id=${response.orderId}&firstName=${prenom.value}&lastName=${nom.value}&totalPrice=${prixPanier.innerText}`
+    });
+}else{
+    formulaire.addEventListener('submit', (e)=>{
+        alert('Veuillez ajouter au moins un produit dans votre panier');
+        e.preventDefault();
+    });    
+}       
+
   
 
 

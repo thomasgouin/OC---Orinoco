@@ -39,8 +39,9 @@
         </a>    
         <nav>    
             <ul>
-                <li>
-                    <a href="https://thomasgouin.github.io/projet5-oc-Orinoco/panier.html" title="voir votre panier">
+
+                <li >
+                    <a href="./panier.html" title="voir votre panier" class="active">
                         <svg height="44" viewBox="0 0 44 44" width="44" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <linearGradient id="a" gradientUnits="objectBoundingBox" x1=".316" x2="1" y1=".325" y2="1"><stop offset="0" stop-color="#dd8c4e"/><stop offset="1" stop-color="#986efb"/></linearGradient><path d="m20 44a19.982 19.982 0 0 1 -20-20v-9.433h10.154v-4.161a9.268 9.268 0 0 1 .931-4.051 10.444 10.444 0 0 1 2.539-3.308 12.018 12.018 0 0 1 3.765-2.229 13.4 13.4 0 0 1 9.222 0 12.028 12.028 0 0 1 3.766 2.229 10.417 10.417 0 0 1 2.539 3.308 9.273 9.273 0 0 1 .931 4.05v4.162h10.153v9.433a19.982 19.982 0 0 1 -20 20zm7.078-22.594a3.2 3.2 0 0 0 3.384 2.973 3.2 3.2 0 0 0 3.385-2.973 3.191 3.191 0 0 0 -3.3-2.973h-.166a3.191 3.191 0 0 0 -3.304 2.973zm-16.924 0a3.2 3.2 0 0 0 3.385 2.973 3.2 3.2 0 0 0 3.385-2.973 3.191 3.191 0 0 0 -3.3-2.973h-.166a3.191 3.191 0 0 0 -3.304 2.973zm16.924-6.838v-4.162a4.175 4.175 0 0 0 -1.488-3.154 5.588 5.588 0 0 0 -7.18 0 4.178 4.178 0 0 0 -1.487 3.154v4.162z" fill="url(#a)"/>
                         </svg>
@@ -90,7 +91,7 @@
                         
                         <label class="formulaire__label" for="ville">Ville*</label>
                         <span class="formulaire__erreur" id="erreurVille"></span>
-                        <input class="formulaire__input" type="text" name="city" id="ville" placeholder="Indiquez votre code postal" pattern= "^[A-Za-zïéèùÉÈÏ]{2,15}[\S\- ]?[A-Za-zïéèùÉÈÏ\S\- ]{0,15}"required/><br/>
+                        <input class="formulaire__input" type="text" name="city" id="ville" placeholder="Indiquez votre code postal" pattern= "[0-9]{5}\s?"required/><br/>
                         
                         <label class="formulaire__label" for="email">E-mail*</label>
                         <span class="formulaire__erreur" id= "erreurEmail"></span>
@@ -109,6 +110,7 @@
     </footer>
     <script src= "./js/ClassPanierProduit.js"></script>
     <script src= "./js/panier.js"></script>
+    <script src="./js/validationFormulaire.js"></script>
     <script src="./js/formulaire.js"></script>
 
 </body>
