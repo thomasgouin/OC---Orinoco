@@ -48,7 +48,7 @@ if(parseInt(prixTotal.innerText) !== 0){
     });
 }else{
     formulaire.addEventListener('submit', (e)=>{
-        swal.fire({
+        Swal.fire({
             title: "Pas de bras, pas de chocolat",
             icon: 'info',
             text: "Veillez sélectionner au moins un article",
