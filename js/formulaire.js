@@ -43,7 +43,7 @@ if(parseInt(prixTotal.innerText) !== 0){
             contact,
             products
         } 
-        const response = await postData('POST','http://localhost:3000/api/cameras/order', donneesServeur);
+        const response = await postData('POST','https://oc-p5-api.herokuapp.com/api/cameras/order', donneesServeur);
         window.location = `confirmation.html?id=${response.orderId}&firstName=${prenom.value}&lastName=${nom.value}&totalPrice=${prixPanier.innerText}`
     });
 }else{

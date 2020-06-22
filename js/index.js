@@ -3,7 +3,7 @@
 */
 
 const fetchApi = async function () {
-    const response = await fetch ('http://localhost:3000/api/cameras')
+    const response = await fetch ('https://oc-p5-api.herokuapp.com/api/cameras')
     const jsonData = await response.json();
     displayAppareil(jsonData);
 } 
