@@ -57,7 +57,7 @@ if(parseInt(prixTotal.innerText) !== 0){
         Swal.fire({
             title: "Pas de bras, pas de chocolat",
             icon: 'info',
-            text: "Veillez sélectionner au moins un article",
+            text: "Veuillez sélectionner au moins un article",
         });
         e.preventDefault();
     });    
