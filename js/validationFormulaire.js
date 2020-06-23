@@ -2,7 +2,9 @@
     Afin d'aider les utilisateurs à bien remplir le champ de données, nous indiquons un message personnalisé lorsque ce dernier quitte le champ
     Nous avons trois étapes : 
         - le champs est manquant :"Merci de renseigner "valeur demandée" ".
-        - le champs ne correspond pas au pattern : "Veuillez vérifier vos informations"
+        - le champs répond à toutes les exigences et est déclaré valide.
+        - le champs n'est pas valide (PatternMismatch notamment) et on demande à l'internaute de vérifier ses informations. 
+
 */
 
 const verifNom = nom.addEventListener('blur', (e) => {
