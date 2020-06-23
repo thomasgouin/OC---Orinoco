@@ -52,12 +52,6 @@ if(parseInt(prixTotal.innerText) !== 0){
             title: "Pas de bras, pas de chocolat",
             icon: 'info',
             text: "Veillez sélectionner au moins un article",
-            showClass: {
-                popup: 'animate__animated animate__fadeInDown'
-              },
-              hideClass: {
-                popup: 'animate__animated animate__fadeOutUp'
-              },
         });
         e.preventDefault();
     });    
