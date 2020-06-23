@@ -463,13 +463,12 @@ strong {
   margin: auto 0;
 }
 .achat__bouton {
-  width: 33%;
+  width: 55%;
   margin-left: 1rem;
   border-radius: 3rem;
   background-color: #986EFB;
   border: 2px solid #986EFB;
-  border-radius: 3rem;
-  height: 1.5rem;
+  height: 3rem;
   color: #fff;
   text-align: center;
   line-height: 1.5rem;
@@ -479,6 +478,9 @@ strong {
 }
 .achat__bouton:hover {
   opacity: 0.8;
+}
+.achat__bouton__text {
+  line-height: 3rem;
 }
 
 .panier-wrapper {
@@ -634,8 +636,8 @@ strong {
     line-height: 3rem;
   }
   .achat__bouton {
-    margin-left: 3rem;
-    width: 40%;
+    margin-left: 2rem;
+    width: 50%;
   }
 
   .bouton {
