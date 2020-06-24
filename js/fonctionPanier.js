@@ -42,7 +42,7 @@ function affichageLignePanier() {
             let updatePrice = new Event('updatePanier', {bubbles: false})
             document.dispatchEvent(updatePrice);
         }); 
-        // suppression des éléments (bouton corbeille)
+        //suppression des éléments (bouton corbeille)
         produitCorbeille.addEventListener('click', function(){
             panierParse.splice(i,1);
             localStorage.setItem('panier', JSON.stringify(panierParse));
