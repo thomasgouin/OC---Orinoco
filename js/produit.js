@@ -10,7 +10,7 @@ const fetchApi = async function () {
     document.getElementById('name').textContent = appareil.name;
     document.getElementById('description').textContent = appareil.description;
     document.getElementById('price').textContent = Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(appareil.price/100);
-    document.getElementById('image').setAttribute("src", appareil.imageUrl)
+    document.getElementById('image-container').innerHTML = `<img id="image" src="${appareil.imageUrl}" class="page-produit__image" alt="image de l'appareil photo selectionné">`;
 
     // Pour les options, nous optons pour du innerHTML avec un complétion complétion automatique générée par la méthode forEach.
     let select = `<select><option value="">Choisissez votre lentille</option>`;
